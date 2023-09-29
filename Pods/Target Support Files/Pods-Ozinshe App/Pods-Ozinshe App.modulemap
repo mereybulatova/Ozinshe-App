@@ -1,0 +1,6 @@
+framework module Pods_Ozinshe_App {
+  umbrella header "Pods-Ozinshe App-umbrella.h"
+
+  export *
+  module * { export * }
+}
