@@ -30,6 +30,9 @@ class FavoriteTableViewController: UITableViewController {
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         
+        let MovieCellnib = UINib(nibName: "MovieCell", bundle: nil)
+        tableView.register(MovieCellnib, forCellReuseIdentifier: "MovieCell")
+        
         tableView.addSubview(refreshControl!)
         
         downloadFavorites()

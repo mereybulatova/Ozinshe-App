@@ -38,6 +38,8 @@
 		C4396D902AC33E0700FF6308 /* TextFieldWithPadding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4396D8F2AC33E0700FF6308 /* TextFieldWithPadding1.swift */; };
 		C4396D922AC3619800FF6308 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4396D912AC3619800FF6308 /* LogOutViewController.swift */; };
 		C4396DD22AC7202400FF6308 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4396DD12AC7202400FF6308 /* SearchViewController.swift */; };
+		C45F1D612AC868DD0021CAAB /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45F1D602AC868DD0021CAAB /* MovieCell.xib */; };
+		C45F1D652ACC76FA0021CAAB /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F1D642ACC76FA0021CAAB /* CategoryTableViewController.swift */; };
 		CBA73B78B6F7349994549A80 /* Pods_Ozinshe_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0707E84193AE11962E761D /* Pods_Ozinshe_App.framework */; };
 		FF5D0211D2A8CA02173F072D /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6FEE9EEC2535FDD6E5651B /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,8 @@
 		C4396D8F2AC33E0700FF6308 /* TextFieldWithPadding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding1.swift; sourceTree = "<group>"; };
 		C4396D912AC3619800FF6308 /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		C4396DD12AC7202400FF6308 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C45F1D602AC868DD0021CAAB /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		C45F1D642ACC76FA0021CAAB /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		D1C1EFF04397A5E1F4B7D791 /* Pods-Ozinshe App-Ozinshe AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ozinshe App-Ozinshe AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Ozinshe App-Ozinshe AppUITests/Pods-Ozinshe App-Ozinshe AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F91CE0AC8606E12E07F5E0DC /* Pods-Ozinshe AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ozinshe AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Ozinshe AppTests/Pods-Ozinshe AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				C410F1A12AA3AC1F00F5CC26 /* FavoriteTableViewController.swift */,
+				C45F1D602AC868DD0021CAAB /* MovieCell.xib */,
 				C410F1A32AA3AE7800F5CC26 /* MovieTableViewCell.swift */,
 			);
 			path = Favorites;
@@ -269,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				C4396DD12AC7202400FF6308 /* SearchViewController.swift */,
+				C45F1D642ACC76FA0021CAAB /* CategoryTableViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 				C410F19B2AA3954200F5CC26 /* SF-Pro-Display-Bold.otf in Resources */,
 				C410F19D2AA3954F00F5CC26 /* SF-Pro-Display-Regular.otf in Resources */,
 				C410F1F72AA6506E00F5CC26 /* Assets.xcassets in Resources */,
+				C45F1D612AC868DD0021CAAB /* MovieCell.xib in Resources */,
 				C410F16D2AA37B6D00F5CC26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +562,7 @@
 				C410F1982AA38C9D00F5CC26 /* TabBarController.swift in Sources */,
 				C4396D672ABDCEE800FF6308 /* SignInViewController.swift in Sources */,
 				C4396D852ABF645500FF6308 /* Genre.swift in Sources */,
+				C45F1D652ACC76FA0021CAAB /* CategoryTableViewController.swift in Sources */,
 				C410F2032AA6568300F5CC26 /* ProfileViewController.swift in Sources */,
 				C4396D902AC33E0700FF6308 /* TextFieldWithPadding1.swift in Sources */,
 				C4396D782ABE120700FF6308 /* TextFieldWithPadding.swift in Sources */,

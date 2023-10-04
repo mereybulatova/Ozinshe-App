@@ -444,10 +444,10 @@
             </objects>
             <point key="canvasLocation" x="-150.38167938931298" y="3.5211267605633805"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Іздеу-->
         <scene sceneID="paJ-hf-dbm">
             <objects>
-                <viewController id="mW4-oE-NAw" customClass="SearchViewController" customModule="Ozinshe_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Іздеу" id="mW4-oE-NAw" customClass="SearchViewController" customModule="Ozinshe_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvr-Sl-NlS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -459,6 +459,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChanged:" destination="mW4-oE-NAw" eventType="editingChanged" id="JSA-iN-cyF"/>
+                                    <action selector="textFieldEditingDidBegin:" destination="mW4-oE-NAw" eventType="editingDidBegin" id="mpk-zr-8pG"/>
+                                    <action selector="textFieldEditingDidEnd:" destination="mW4-oE-NAw" eventType="editingDidEnd" id="5Nf-P6-SPA"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-r8-9M2">
                                 <rect key="frame" x="313" y="127" width="56" height="56"/>
@@ -469,6 +474,9 @@
                                 <color key="tintColor" red="0.95294117647058818" green="0.95686274509803915" blue="0.96470588235294119" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="SearchOutline" title=""/>
+                                <connections>
+                                    <action selector="searchButton:" destination="mW4-oE-NAw" eventType="touchDown" id="UGh-dV-ry7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pop-Lh-dp0">
                                 <rect key="frame" x="245" y="127" width="52" height="56"/>
@@ -477,15 +485,18 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="ClearButton" title=""/>
+                                <connections>
+                                    <action selector="clearTextField:" destination="mW4-oE-NAw" eventType="touchDown" id="s2A-uX-pz3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Санаттар" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoT-fx-0pi">
-                                <rect key="frame" x="24.000000000000007" y="218" width="109.66666666666669" height="28.666666666666657"/>
+                                <rect key="frame" x="24.000000000000007" y="218" width="109.66666666666669" height="28"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a9H-Au-TIh">
-                                <rect key="frame" x="0.0" y="246.66666666666663" width="393" height="340"/>
+                                <rect key="frame" x="0.0" y="246" width="393" height="340"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="340" id="QNf-8x-fuN"/>
@@ -497,17 +508,17 @@
                                     <inset key="sectionInset" minX="24" minY="16" maxX="24" maxY="16"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aBa-rp-b1Q">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="aBa-rp-b1Q">
                                         <rect key="frame" x="24" y="16" width="128" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dy1-3c-W6Y">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="34"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-rg-pvp">
+                                                <view tag="1000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-rg-pvp">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="34"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телехикая" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBt-jh-L40">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телехикая" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBt-jh-L40">
                                                             <rect key="frame" x="16" y="0.0" width="96" height="34"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="34" id="Fsn-Vv-bHg"/>
@@ -539,7 +550,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="75e-up-IMO">
-                                <rect key="frame" x="0.0" y="586.66666666666663" width="393" height="182.33333333333337"/>
+                                <rect key="frame" x="0.0" y="586" width="393" height="183"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -570,13 +581,46 @@
                     <connections>
                         <outlet property="clearButton" destination="pop-Lh-dp0" id="fdn-Lj-PLY"/>
                         <outlet property="collectionView" destination="a9H-Au-TIh" id="UZe-os-dJr"/>
+                        <outlet property="searchButton" destination="wSj-r8-9M2" id="Fa5-ll-cIa"/>
                         <outlet property="searchTextField" destination="LQN-RY-3Nm" id="lxv-6h-kiq"/>
+                        <outlet property="tableView" destination="75e-up-IMO" id="C2r-hK-oeU"/>
+                        <outlet property="tableViewToCollectionConstraint" destination="KYs-cq-6hn" id="Zjy-gY-X3c"/>
+                        <outlet property="tableViewToLabelConstraint" destination="dT7-cE-clV" id="1tY-fb-W7R"/>
                         <outlet property="topLabel" destination="EoT-fx-0pi" id="XGs-Nj-WmZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1Q-44-oTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3608.3969465648852" y="-456.33802816901408"/>
+        </scene>
+        <!--Category Table View Controller-->
+        <scene sceneID="SqF-9h-lrf">
+            <objects>
+                <tableViewController storyboardIdentifier="CategoryTableViewController" id="HNM-pB-Rrb" customClass="CategoryTableViewController" customModule="Ozinshe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1iX-y6-dWH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qzI-fH-IMi">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qzI-fH-IMi" id="S39-n8-sao">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HNM-pB-Rrb" id="fey-oF-XE5"/>
+                            <outlet property="delegate" destination="HNM-pB-Rrb" id="hql-Mn-ajR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="8EM-kU-vhI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbg-LQ-iyX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4348.8549618320612" y="-456.33802816901408"/>
         </scene>
         <!--Favorite Table View Controller-->
         <scene sceneID="SC5-ME-dGe">
@@ -689,19 +733,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Менің профилім" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLF-U8-67t">
-                                <rect key="frame" x="102.66666666666667" y="263" width="187.66666666666663" height="27.666666666666686"/>
+                                <rect key="frame" x="102.66666666666667" y="263" width="187.66666666666663" height="28"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ali@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbo-4F-U7N">
-                                <rect key="frame" x="153.66666666666666" y="298.66666666666669" width="85.666666666666657" height="17"/>
+                                <rect key="frame" x="153.66666666666666" y="299" width="85.666666666666657" height="17"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                 <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMh-Jy-r9L">
-                                <rect key="frame" x="0.0" y="339.66666666666674" width="393" height="380.33333333333326"/>
+                                <rect key="frame" x="0.0" y="340" width="393" height="380"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XW2-ZP-wrZ">
                                         <rect key="frame" x="24" y="0.0" width="345" height="64"/>
@@ -732,7 +776,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қазақша" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLW-Xe-BQC">
-                                        <rect key="frame" x="287" y="23.666666666666629" width="58" height="17"/>
+                                        <rect key="frame" x="287" y="23.666666666666686" width="58" height="17"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
                                         <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -811,13 +855,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тіл" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-UI-25p">
-                                        <rect key="frame" x="24.000000000000004" y="57.999999999999993" width="34.333333333333343" height="28.666666666666664"/>
+                                        <rect key="frame" x="24.000000000000004" y="58" width="34.333333333333343" height="28"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                         <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OwC-Og-HLi">
-                                        <rect key="frame" x="0.0" y="98.666666666666643" width="393" height="204.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="98" width="393" height="205"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="65" id="KgR-9f-cSf">
@@ -835,7 +879,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қазақша" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA3-kL-fbI">
-                                                            <rect key="frame" x="24" y="22.666666666666671" width="66" height="20"/>
+                                                            <rect key="frame" x="24" y="23.333333333333329" width="66" height="18.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -915,19 +959,19 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Шығу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ql-Xh-VIX">
-                                        <rect key="frame" x="24" y="57.999999999999993" width="66" height="28.666666666666664"/>
+                                        <rect key="frame" x="24" y="58" width="66" height="28"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                         <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сіз шынымен аккаунтыңыздан шығасыз ба? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amf-qN-cHM">
-                                        <rect key="frame" x="24" y="94.666666666666629" width="345" height="20"/>
+                                        <rect key="frame" x="24" y="94" width="345" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                         <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atu-Wn-rPk">
-                                        <rect key="frame" x="24" y="146.66666666666663" width="345" height="56"/>
+                                        <rect key="frame" x="24" y="144.66666666666663" width="345" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="1hv-Tx-0E0"/>
                                         </constraints>
@@ -941,7 +985,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljR-nB-FgO">
-                                        <rect key="frame" x="24" y="210.66666666666663" width="345" height="56"/>
+                                        <rect key="frame" x="24" y="208.66666666666663" width="345" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="dbO-Cz-BLW"/>
                                         </constraints>
@@ -1092,6 +1136,9 @@
     <designables>
         <designable name="JUc-vZ-eG6">
             <size key="intrinsicContentSize" width="139" height="20"/>
+        </designable>
+        <designable name="LQN-RY-3Nm">
+            <size key="intrinsicContentSize" width="39.333333333333336" height="21"/>
         </designable>
         <designable name="N9X-qr-mVI">
             <size key="intrinsicContentSize" width="139" height="20"/>
