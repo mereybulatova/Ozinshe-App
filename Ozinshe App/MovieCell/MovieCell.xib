@@ -91,7 +91,7 @@
                 <outlet property="posterImageView" destination="UmL-fX-uRb" id="8hO-eF-DJ6"/>
                 <outlet property="yearLabel" destination="qyG-wE-eUb" id="dLh-fo-uGW"/>
             </connections>
-            <point key="canvasLocation" x="-129" y="-24"/>
+            <point key="canvasLocation" x="-129.00763358778624" y="-24.295774647887324"/>
         </tableViewCell>
     </objects>
     <resources>

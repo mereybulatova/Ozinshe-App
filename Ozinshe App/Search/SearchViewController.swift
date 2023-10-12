@@ -248,6 +248,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let categoryTableViewController = storyboard?.instantiateViewController(withIdentifier: "CategoryTableViewController") as! CategoryTableViewController
         categoryTableViewController.categoryID = categories[indexPath.row].id
+        categoryTableViewController.categoryName = categories[indexPath.row].name
         
         navigationController?.show(categoryTableViewController, sender: self)
     }
