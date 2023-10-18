@@ -16,17 +16,32 @@ class CategoryTableViewController: UITableViewController {
     var categoryID = 0
     var categoryName = ""
     
+    var isLoading: Bool = false
+    
     var movies:[Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        
         let MovieCell = UINib(nibName: "MovieCell", bundle: nil)
         tableView.register(MovieCell, forCellReuseIdentifier: "MovieCell")
         
         self.title = categoryName
+        navigationItem.title = ""
         
         downloadMoviesByCategory()
+    }
+    
+    @objc func handleRefresh() {
+        if !isLoading {
+            isLoading = true
+            movies.removeAll()
+            tableView.reloadData()
+            downloadMoviesByCategory()
+        }
     }
     
     func downloadMoviesByCategory() {
@@ -35,6 +50,9 @@ class CategoryTableViewController: UITableViewController {
         let headers: HTTPHeaders = ["Authorization": "Bearer \(Storage.sharedInstance.accessToken)"]
         
         let parametres = ["categoryId": categoryID]
+        
+        self.isLoading = false
+        self.refreshControl?.endRefreshing()
         
         AF.request(Urls.MOVIES_BY_CATEGORY_URL, method: .get, parameters: parametres, headers: headers).responseData { response in
             
@@ -89,5 +107,13 @@ class CategoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 153
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieinfoVC = storyboard?.instantiateViewController(withIdentifier: "MovieInfoViewController") as! MovieInfoViewController
+        
+        movieinfoVC.movie  = movies[indexPath.row]
+        
+        navigationController?.show(movieinfoVC, sender: self)
     }
 }

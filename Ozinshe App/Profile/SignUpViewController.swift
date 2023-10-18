@@ -21,9 +21,10 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         configureViews()
-        
+      
         hideKeyboardWhenTappedAround()
     }
+        
     
     func configureViews() {
         signUpEmailTextField.layer.cornerRadius = 12.0
@@ -56,17 +57,22 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signInButton(_ sender: Any) {
         if let navigationController = self.navigationController {
-            let viewControllerToReturnTo = navigationController.viewControllers[0]
-            navigationController.popToViewController(viewControllerToReturnTo, animated: true)
+            signInButton.addTarget(self, action: #selector(nextButtonTouched), for: .touchUpInside)
+            navigationItem.title = ""
         }
+        
     }
     
+    @objc func nextButtonTouched() {
+        let signInViewController = storyboard?.instantiateViewController(withIdentifier: "SignInViewController")
+        navigationController?.show(signInViewController!, sender: self)
+    }
     
-    @IBAction func textFieldEditingBegin(_ sender: TextFieldWithPadding1) {
+    @IBAction func textFieldEditingBegin(_ sender: TextFieldWithPadding) {
         sender.layer.borderColor = UIColor(red: 0.59, green: 0.33, blue: 0.94, alpha: 1.00).cgColor
     }
     
-    @IBAction func textFieldEditingEnd(_ sender: TextFieldWithPadding1) {
+    @IBAction func textFieldEditingEnd(_ sender: TextFieldWithPadding) {
         sender.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
     }
     

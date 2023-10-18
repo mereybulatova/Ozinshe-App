@@ -33,7 +33,6 @@ class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
         
         return attributes
     }
-    
 }
 class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
@@ -44,7 +43,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewToCollectionConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewToLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak var searchButton: UIButton!
     
     var categories: [Category] = []
     
@@ -53,14 +51,13 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Іздеу"
-        
-        searchButton.tintColor = UIColor(red: 0.95, green: 0.96, blue: 0.96, alpha: 1.00)
+        clearButton.isHidden = true
         
         configureViews()
         downloadCategories()
         hideKeyboardWhenTappedAround()
     }
+    
     
     // MARK: - Configure Views
     func configureViews() {
@@ -73,6 +70,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         layout.minimumLineSpacing = 16
         layout.estimatedItemSize.width = 100
         collectionView.collectionViewLayout = layout
+        
         
         //searchTextField
         searchTextField.padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
@@ -226,6 +224,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
     }
     
+//    MARK: - CollectionView
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return categories.count
         }
@@ -253,6 +252,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         navigationController?.show(categoryTableViewController, sender: self)
     }
         
+//    MARK: - tableView
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -272,14 +272,12 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 153.0
     }
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieinfoVC = storyboard?.instantiateViewController(withIdentifier: "MovieInfoViewController") as! MovieInfoViewController
         
+        movieinfoVC.movie = movies[indexPath.row]
+        
+        navigationController?.show(movieinfoVC, sender: self)
+    }
 }

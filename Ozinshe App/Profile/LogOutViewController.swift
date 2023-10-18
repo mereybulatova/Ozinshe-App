@@ -19,9 +19,7 @@ class LogOutViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
+   
         configureView()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissView))
@@ -32,8 +30,6 @@ class LogOutViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func configureView() {
-        LogOutButton.tintColor = UIColor(red: 0.59, green: 0.33, blue: 0.94, alpha: 1.00)
-        
         LogOutBackgroundView.layer.cornerRadius = 32
         LogOutBackgroundView.clipsToBounds = true
         LogOutBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]

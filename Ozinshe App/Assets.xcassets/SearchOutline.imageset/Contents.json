@@ -1,17 +1,50 @@
 {
   "images" : [
     {
-      "filename" : "Search-Outline.png",
+      "filename" : "Frame 6.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Search-Outline 1.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Frame 7.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Frame 6 (1).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Search-Outline 2.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Frame 6@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Frame 6 (2).png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Frame 6@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

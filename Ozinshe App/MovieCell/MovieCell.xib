@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -28,7 +28,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қызғалдақтар мекені " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IO-BV-aH7">
                         <rect key="frame" x="112.00000000000001" y="24" width="148.33333333333337" height="17"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
-                        <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" name="111827 - FFFFFF"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020 • Телехикая • Мультфильм" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyG-wE-eUb">
@@ -49,14 +49,14 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қарау" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-Wf-bzz">
                                 <rect key="frame" x="31.999999999999996" y="4" width="35.666666666666657" height="14"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="F8EEFF - 1C2431"/>
+                                <color key="tintColor" name="F8EEFF - 1C2431"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="12"/>
                                 <color key="textColor" red="0.59215686270000001" green="0.32549019610000002" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.93333333330000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="F8EEFF - 1C2431"/>
                         <constraints>
                             <constraint firstItem="dhc-Wf-bzz" firstAttribute="top" secondItem="naf-xO-1xY" secondAttribute="top" constant="4" id="0XD-Nb-doG"/>
                             <constraint firstItem="KpX-6I-IXZ" firstAttribute="centerY" secondItem="naf-xO-1xY" secondAttribute="centerY" id="38Y-gZ-Hjb"/>
@@ -85,9 +85,10 @@
                     <constraint firstItem="naf-xO-1xY" firstAttribute="top" secondItem="qyG-wE-eUb" secondAttribute="bottom" constant="24" id="lDT-ui-Nuf"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" name="FFFFFF - 111827"/>
             <connections>
                 <outlet property="nameLabel" destination="8IO-BV-aH7" id="lXn-CH-mpb"/>
-                <outlet property="playView" destination="dhc-Wf-bzz" id="B4n-Z2-xZZ"/>
+                <outlet property="playViewB" destination="naf-xO-1xY" id="Ecf-Oc-ARE"/>
                 <outlet property="posterImageView" destination="UmL-fX-uRb" id="8hO-eF-DJ6"/>
                 <outlet property="yearLabel" destination="qyG-wE-eUb" id="dLh-fo-uGW"/>
             </connections>
@@ -96,8 +97,14 @@
     </objects>
     <resources>
         <image name="Play" width="16.333333969116211" height="16"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="111827 - FFFFFF">
+            <color red="0.067000001668930054" green="0.093999996781349182" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F8EEFF - 1C2431">
+            <color red="0.97299998998641968" green="0.93300002813339233" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FFFFFF - 111827">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

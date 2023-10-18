@@ -15,13 +15,14 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureViews()
-        
+    
         hideKeyboardWhenTappedAround()
+        
     }
     
     func configureViews() {
@@ -34,9 +35,6 @@ class SignInViewController: UIViewController {
         passwordTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
         
         signInButton.layer.cornerRadius = 12.0
-        signInButton.tintColor = UIColor(red: 0.59, green: 0.33, blue: 0.94, alpha: 1.00)
-        
-        signUpButton.tintColor = UIColor(red: 0.70, green: 0.46, blue: 0.97, alpha: 1.00)
     }
     
     func hideKeyboardWhenTappedAround() {
@@ -44,7 +42,7 @@ class SignInViewController: UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
-
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -59,6 +57,18 @@ class SignInViewController: UIViewController {
     
     @IBAction func showPassword(_ sender: Any) {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+    }
+    
+    @IBAction func signUpButton(_ sender: Any) {
+        if let navigationController = self.navigationController {
+            signUpButton.addTarget(self, action: #selector(signInButtonTap), for: .touchUpInside)
+            navigationItem.title = ""
+        }
+    }
+    
+    @objc func signInButtonTap() {
+        let signUpViewController = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
+        navigationController?.show(signUpViewController!, sender: self)
     }
     
     @IBAction func signIn(_ sender: Any) {
@@ -105,22 +115,4 @@ class SignInViewController: UIViewController {
         self.present(tabViewController!, animated: true, completion: nil)
     }
 }
-
-
-    
-
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 

@@ -15,11 +15,9 @@ class ProfileViewController: UIViewController, LanguageProtocol {
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var logOutButton: UIBarButtonItem!
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +57,22 @@ class ProfileViewController: UIViewController, LanguageProtocol {
         
         self.present(logOutVC, animated: true, completion: nil)
     }
+    
+    @IBAction func userInfoButton(_ sender: Any) {
+        let personalInfo = storyboard?.instantiateViewController(withIdentifier: "PersonalInfoViewController") as! PersonalInfoViewController
+        navigationItem.title = ""
+        
+        navigationController?.show(personalInfo, sender: self)
+    }
+    
+    @IBAction func changePassword(_ sender: Any) {
+        let passwordChange = storyboard?.instantiateViewController(withIdentifier: "EditPasswordViewController") as! EditPasswordViewController
+        
+        navigationItem.title = ""
+        
+        navigationController?.show(passwordChange, sender: self)
+    }
+    
     
     func languageDidChande() {
         configureViews()

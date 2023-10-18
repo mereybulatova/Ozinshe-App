@@ -9,47 +9,26 @@ import UIKit
 import SwiftyJSON
 import SVProgressHUD
 import Alamofire
-import SDWebImage
 
 class FavoriteTableViewController: UITableViewController {
-    
+  
     var favorite:[Movie] = []
-    
-    var isLoading: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        
-        refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
-        
+    
         let MovieCellnib = UINib(nibName: "MovieCell", bundle: nil)
         tableView.register(MovieCellnib, forCellReuseIdentifier: "MovieCell")
         
-        tableView.addSubview(refreshControl!)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         downloadFavorites()
-        
     }
-    
-    @objc func handleRefresh() {
-        if !isLoading {
-            isLoading = true
-            favorite.removeAll()
-            tableView.reloadData()
-            downloadFavorites()
-        }
-    }
-    
     
     func downloadFavorites() {
+        self.favorite.removeAll()
+        
         SVProgressHUD.show()
         
         let headers: HTTPHeaders = ["Authorization": "Bearer \(Storage.sharedInstance.accessToken)"]
@@ -58,9 +37,6 @@ class FavoriteTableViewController: UITableViewController {
             response in
             
             SVProgressHUD.dismiss()
-            
-            self.isLoading = false
-            self.refreshControl?.endRefreshing()
             
             var resultString = ""
             if let data = response.data {
@@ -104,18 +80,24 @@ class FavoriteTableViewController: UITableViewController {
         return favorite.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieinfoVC = storyboard?.instantiateViewController(withIdentifier: "MovieInfoViewController") as! MovieInfoViewController
+        
+        movieinfoVC.movie = favorite[indexPath.row]
+        
+        navigationController?.show(movieinfoVC, sender: self)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
-        
-        // Configure the cell...
+
         cell.setData(movie: favorite[indexPath.row])
-        
+
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 153
+        return 153.0
     }
     
     /*

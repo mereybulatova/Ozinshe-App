@@ -12,14 +12,13 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var playView: UILabel!
+    @IBOutlet weak var playViewB: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
         posterImageView.layer.cornerRadius = 8
-        playView.layer.cornerRadius = 8
+        playViewB.layer.cornerRadius = 8
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
