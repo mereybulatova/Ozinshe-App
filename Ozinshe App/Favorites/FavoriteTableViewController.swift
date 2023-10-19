@@ -20,10 +20,15 @@ class FavoriteTableViewController: UITableViewController {
         let MovieCellnib = UINib(nibName: "MovieCell", bundle: nil)
         tableView.register(MovieCellnib, forCellReuseIdentifier: "MovieCell")
         
+        configureViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         downloadFavorites()
+    }
+    
+    func configureViews() {
+        navigationItem.title = "FAVORITE_NAVIGATION".localized()
     }
     
     func downloadFavorites() {

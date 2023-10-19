@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0D9A5F4385A725C6EA7210 /* Pods_Ozinshe_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C413762C2AE1389C00763FEC /* Pods_Ozinshe_AppTests.framework */; };
+		22DC34A09CDD55283525CF95 /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C413762B2AE1389C00763FEC /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework */; };
 		8DF315F522C958D582DE5BC3 /* Pods_Ozinshe_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18392D432ECB5CA464E3F3E4 /* Pods_Ozinshe_AppTests.framework */; };
 		C410F1662AA37B6D00F5CC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410F1652AA37B6D00F5CC26 /* AppDelegate.swift */; };
 		C410F1682AA37B6D00F5CC26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410F1672AA37B6D00F5CC26 /* SceneDelegate.swift */; };
@@ -25,6 +27,8 @@
 		C410F1F72AA6506E00F5CC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C410F1EB2AA6506D00F5CC26 /* Assets.xcassets */; };
 		C410F2032AA6568300F5CC26 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410F2022AA6568300F5CC26 /* ProfileViewController.swift */; };
 		C410F2052AA6650700F5CC26 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410F2042AA6650700F5CC26 /* LanguageViewController.swift */; };
+		C41376332AE1389D00763FEC /* Pods_Ozinshe_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C413762A2AE1389C00763FEC /* Pods_Ozinshe_App.framework */; };
+		C41376342AE1389D00763FEC /* Pods_Ozinshe_App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C413762A2AE1389C00763FEC /* Pods_Ozinshe_App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C4396D672ABDCEE800FF6308 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4396D662ABDCEE800FF6308 /* SignInViewController.swift */; };
 		C4396D752ABE11A600FF6308 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4396D742ABE11A600FF6308 /* Storage.swift */; };
 		C4396D782ABE120700FF6308 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4396D772ABE120700FF6308 /* TextFieldWithPadding.swift */; };
@@ -44,7 +48,6 @@
 		C45F1D702AD6AB550021CAAB /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F1D6F2AD6AB550021CAAB /* MainPageViewController.swift */; };
 		C46C01C82ADF242E0050A68A /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C01C72ADF242E0050A68A /* PersonalInfoViewController.swift */; };
 		C46C01CA2ADF244F0050A68A /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C01C92ADF244F0050A68A /* EditPasswordViewController.swift */; };
-		C46C01CE2ADF30400050A68A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C01CD2ADF303F0050A68A /* UserInfo.swift */; };
 		C4FB51582AD94B38009822A9 /* MainBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB51572AD94B38009822A9 /* MainBannerTableViewCell.swift */; };
 		C4FB515A2AD94D3A009822A9 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB51592AD94D3A009822A9 /* BannerCollectionViewCell.swift */; };
 		C4FB515C2AD94FB2009822A9 /* BannerMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB515B2AD94FB2009822A9 /* BannerMovie.swift */; };
@@ -78,6 +81,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C413763D2AE1389D00763FEC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C41376342AE1389D00763FEC /* Pods_Ozinshe_App.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E655440433A153A917C8BAE /* Pods-Ozinshe App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ozinshe App.release.xcconfig"; path = "Target Support Files/Pods-Ozinshe App/Pods-Ozinshe App.release.xcconfig"; sourceTree = "<group>"; };
 		18392D432ECB5CA464E3F3E4 /* Pods_Ozinshe_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ozinshe_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +126,15 @@
 		C410F2022AA6568300F5CC26 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C410F2042AA6650700F5CC26 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		C410F2062AA66D0500F5CC26 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C41376282AE1389C00763FEC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C41376292AE1389C00763FEC /* Localize_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localize_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C413762A2AE1389C00763FEC /* Pods_Ozinshe_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Ozinshe_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C413762B2AE1389C00763FEC /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Ozinshe_App_Ozinshe_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C413762C2AE1389C00763FEC /* Pods_Ozinshe_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Ozinshe_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C413762D2AE1389C00763FEC /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C413762E2AE1389C00763FEC /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C413763E2AE138A300763FEC /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C413763F2AE138A300763FEC /* YouTubePlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouTubePlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4396D662ABDCEE800FF6308 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C4396D742ABE11A600FF6308 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C4396D772ABE120700FF6308 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
@@ -128,7 +154,6 @@
 		C45F1D6F2AD6AB550021CAAB /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C46C01C72ADF242E0050A68A /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		C46C01C92ADF244F0050A68A /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
-		C46C01CD2ADF303F0050A68A /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		C4FB51572AD94B38009822A9 /* MainBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerTableViewCell.swift; sourceTree = "<group>"; };
 		C4FB51592AD94D3A009822A9 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4FB515B2AD94FB2009822A9 /* BannerMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerMovie.swift; sourceTree = "<group>"; };
@@ -151,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA73B78B6F7349994549A80 /* Pods_Ozinshe_App.framework in Frameworks */,
+				C41376332AE1389D00763FEC /* Pods_Ozinshe_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DF315F522C958D582DE5BC3 /* Pods_Ozinshe_AppTests.framework in Frameworks */,
+				0F0D9A5F4385A725C6EA7210 /* Pods_Ozinshe_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5D0211D2A8CA02173F072D /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework in Frameworks */,
+				22DC34A09CDD55283525CF95 /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +324,6 @@
 				C4396D862ABF646000FF6308 /* Category.swift */,
 				C45F1D6D2AD6A3320021CAAB /* MainMovies.swift */,
 				C4FB515B2AD94FB2009822A9 /* BannerMovie.swift */,
-				C46C01CD2ADF303F0050A68A /* UserInfo.swift */,
 				C4FB516A2ADD7603009822A9 /* Season.swift */,
 			);
 			path = Model1;
@@ -394,6 +421,15 @@
 		E1BE4477BCC2D00B54B3B955 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C413763E2AE138A300763FEC /* SwiftyJSON.framework */,
+				C413763F2AE138A300763FEC /* YouTubePlayer.framework */,
+				C41376282AE1389C00763FEC /* Alamofire.framework */,
+				C41376292AE1389C00763FEC /* Localize_Swift.framework */,
+				C413762A2AE1389C00763FEC /* Pods_Ozinshe_App.framework */,
+				C413762B2AE1389C00763FEC /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework */,
+				C413762C2AE1389C00763FEC /* Pods_Ozinshe_AppTests.framework */,
+				C413762D2AE1389C00763FEC /* SDWebImage.framework */,
+				C413762E2AE1389C00763FEC /* SVProgressHUD.framework */,
 				2B0707E84193AE11962E761D /* Pods_Ozinshe_App.framework */,
 				7C6FEE9EEC2535FDD6E5651B /* Pods_Ozinshe_App_Ozinshe_AppUITests.framework */,
 				18392D432ECB5CA464E3F3E4 /* Pods_Ozinshe_AppTests.framework */,
@@ -412,7 +448,8 @@
 				C410F15E2AA37B6D00F5CC26 /* Sources */,
 				C410F15F2AA37B6D00F5CC26 /* Frameworks */,
 				C410F1602AA37B6D00F5CC26 /* Resources */,
-				85CE437D35BE252BCEA026DB /* [CP] Embed Pods Frameworks */,
+				C413763D2AE1389D00763FEC /* Embed Frameworks */,
+				1F3446D88E36E4A1ED78C95F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -450,7 +487,7 @@
 				C410F17E2AA37B6E00F5CC26 /* Sources */,
 				C410F17F2AA37B6E00F5CC26 /* Frameworks */,
 				C410F1802AA37B6E00F5CC26 /* Resources */,
-				F5474617C904E9079421D90E /* [CP] Embed Pods Frameworks */,
+				921029DDADBD640BFC49013B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -540,6 +577,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F3446D88E36E4A1ED78C95F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App/Pods-Ozinshe App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App/Pods-Ozinshe App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App/Pods-Ozinshe App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4EF5A9A852F92660345EAB38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,23 +614,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85CE437D35BE252BCEA026DB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App/Pods-Ozinshe App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App/Pods-Ozinshe App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App/Pods-Ozinshe App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		91530CC546538FFD409BF8CA /* [CP] Check Pods Manifest.lock */ = {
@@ -601,6 +638,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		921029DDADBD640BFC49013B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App-Ozinshe AppUITests/Pods-Ozinshe App-Ozinshe AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App-Ozinshe AppUITests/Pods-Ozinshe App-Ozinshe AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App-Ozinshe AppUITests/Pods-Ozinshe App-Ozinshe AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D27D609DAA54819F0126529A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -623,23 +677,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5474617C904E9079421D90E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App-Ozinshe AppUITests/Pods-Ozinshe App-Ozinshe AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App-Ozinshe AppUITests/Pods-Ozinshe App-Ozinshe AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ozinshe App-Ozinshe AppUITests/Pods-Ozinshe App-Ozinshe AppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -647,7 +684,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46C01CE2ADF30400050A68A /* UserInfo.swift in Sources */,
 				C4FB51742ADD864B009822A9 /* MoviePlayerViewController.swift in Sources */,
 				C4FB51602AD9541B009822A9 /* GenreAgeTableViewCell.swift in Sources */,
 				C45F1D6C2AD68B0F0021CAAB /* MainTableViewCell.swift in Sources */,

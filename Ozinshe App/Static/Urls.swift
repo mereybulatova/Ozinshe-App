@@ -26,4 +26,5 @@ class Urls {
     static let GET_USER_PROFILE = BASE_URL + "user/profile"
     static let UPLOAD_USER_INFO = BASE_URL + "user/profile/"
     static let CHANGE_PASSWORD = BASE_URL + "user/profile/changePassword"
+   
 }

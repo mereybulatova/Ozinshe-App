@@ -92,7 +92,7 @@ class SeasonsSeriesViewController: UIViewController,  UICollectionViewDelegate, 
         
         let label = cell.viewWithTag(1001) as! UILabel
         label.text = "\(seasons[indexPath.row].number) сезон"
-        
+       
         let backView = cell.viewWithTag(1000)!
         backView.layer.cornerRadius = 8
         if currentSeason == seasons[indexPath.row].number - 1 {

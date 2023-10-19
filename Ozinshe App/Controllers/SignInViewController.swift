@@ -15,7 +15,11 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-
+    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var signInLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var signInQuestion: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,6 +30,15 @@ class SignInViewController: UIViewController {
     }
     
     func configureViews() {
+        emailTextField.placeholder = "SIGN_UP_EMAIL".localized()
+        passwordTextField.placeholder = "USER_PASSWORD_CHANGE".localized()
+        signInButton.setTitle("SIGN_IN_BUTTON_UP".localized(), for: .normal)
+        signUpButton.setTitle("SIGN_UP_BUTTON".localized(), for: .normal)
+        helloLabel.text = "HELLO_LABEL".localized()
+        signInLabel.text = "DETAIL_SIGN_IN".localized()
+        passwordLabel.text = "CHANGE_PASSWORD_LABEL".localized()
+        signInQuestion.text = "SIGN_IN_QUESTION".localized()
+        
         emailTextField.layer.cornerRadius = 12.0
         emailTextField.layer.borderWidth = 1.0
         emailTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor

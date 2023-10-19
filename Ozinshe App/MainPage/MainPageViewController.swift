@@ -14,7 +14,7 @@ import Alamofire
 class MainPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MovieProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    
+
     var mainMovies: [MainMovies] = []
    
     override func viewDidLoad() {
@@ -24,7 +24,6 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
 
         addNavBarImage()
-        
         downloadMainBanners()
     }
     
@@ -35,8 +34,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         let imageItem = UIBarButtonItem.init(customView: logoImageView)
         navigationItem.leftBarButtonItem = imageItem
     }
-    
-    
+
     
     // MARK: - downloads
     // step 1

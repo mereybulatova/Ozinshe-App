@@ -27,6 +27,12 @@ class MovieInfoViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var arrowImageView: UIImageView!
     @IBOutlet weak var screenshotCollectionView: UICollectionView!
     @IBOutlet weak var similarCollectionView: UICollectionView!
+    @IBOutlet weak var addToListLabel: UILabel!
+    @IBOutlet weak var shareLabel: UILabel!
+    @IBOutlet weak var directorNameLabel: UILabel!
+    @IBOutlet weak var producerNameLabel: UILabel!
+    @IBOutlet weak var screenshotsLabel: UILabel!
+    @IBOutlet weak var similarMoviesLabel: UILabel!
     
     var movie = Movie()
     
@@ -60,6 +66,15 @@ class MovieInfoViewController: UIViewController, UICollectionViewDelegate, UICol
         
         screenshotCollectionView.dataSource = self
         screenshotCollectionView.delegate = self
+        
+        shareLabel.text = "SHARE_LABEL".localized()
+        addToListLabel.text = "ADD_TO_FAVORITE".localized()
+        fullDescriptionButton.setTitle("FULL_DESCRIPTION_BUTTON".localized(), for: .normal)
+        directorNameLabel.text = "DIRECTOR_LABEL".localized()
+        producerNameLabel.text = "PRODUCER_LABEL".localized()
+        seasonsLabel.text = "SERIES_LABEL".localized()
+        screenshotsLabel.text = "SCREENSHOT_LABEL".localized()
+        similarMoviesLabel.text = "SIMILAR_MOVIES_LABEL".localized()
         
         if movie.movieType == "MOVIE" {
             seasonsLabel.isHidden = true
@@ -149,12 +164,14 @@ class MovieInfoViewController: UIViewController, UICollectionViewDelegate, UICol
             playerVC.video_link = movie.video_link
             
             navigationController?.show(playerVC, sender: self)
+            navigationItem.title = ""
         } else {
             let seasonsVC = storyboard?.instantiateViewController(withIdentifier: "SeasonsSeriesViewController") as! SeasonsSeriesViewController
             
             seasonsVC.movie = movie
             
             navigationController?.show(seasonsVC, sender: self)
+            navigationItem.title = ""
         }
     }
     
@@ -272,6 +289,7 @@ class MovieInfoViewController: UIViewController, UICollectionViewDelegate, UICol
             let movieinfoVC = storyboard?.instantiateViewController(withIdentifier: "MovieInfoViewController") as! MovieInfoViewController
             
             movieinfoVC.movie  = similarMovies[indexPath.row]
+            navigationItem.title = ""
             
             navigationController?.show(movieinfoVC, sender: self)
         }

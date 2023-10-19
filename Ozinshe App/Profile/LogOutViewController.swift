@@ -34,6 +34,11 @@ class LogOutViewController: UIViewController, UIGestureRecognizerDelegate {
         LogOutBackgroundView.clipsToBounds = true
         LogOutBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         scrollView.layer.cornerRadius = 3
+        
+        LogOutLabel.text = "LOG_OUT_LABEL".localized()
+        LogOUtQuestionLabel.text = "LOG_OUT_QUES_LABEL".localized()
+        LogOutButton.setTitle("LOG_OUT_BUTTON".localized(), for: .normal)
+        NoLogOutButton.setTitle("NO_LOG_OUT_BUTTON".localized(), for: .normal)
     }
    
     @objc func dismissView() {

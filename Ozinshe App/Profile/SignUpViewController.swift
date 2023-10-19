@@ -16,6 +16,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var repeatSignUpPasswordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpLabel: UILabel!
+    @IBOutlet weak var detailInformationLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var repeatPasswordLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +29,19 @@ class SignUpViewController: UIViewController {
       
         hideKeyboardWhenTappedAround()
     }
-        
     
     func configureViews() {
+        signUpLabel.text = "SIGN_UP_LABEL".localized()
+        detailInformationLabel.text = "DETAIL_INFORM_LABEL".localized()
+        signUpEmailTextField.placeholder = "SIGN_UP_EMAIL".localized()
+        passwordLabel.text = "CHANGE_PASSWORD_LABEL".localized()
+        repeatPasswordLabel.text = "REPEAT_PASSWORD_LABEL".localized()
+        signUpPasswordTextField.placeholder = "USER_PASSWORD_CHANGE".localized()
+        repeatSignUpPasswordTextField.placeholder = "USER_PASSWORD_CHANGE".localized()
+        questionLabel.text = "SIGN_UP_QUESTION_LABEL".localized()
+        signUpButton.setTitle("SIGN_UP_BUTTON".localized(), for: .normal)
+        signInButton.setTitle("SIGN_IN_BUTTON_UP".localized(), for: .normal)
+        
         signUpEmailTextField.layer.cornerRadius = 12.0
         signUpEmailTextField.layer.borderWidth = 1.0
         signUpEmailTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor

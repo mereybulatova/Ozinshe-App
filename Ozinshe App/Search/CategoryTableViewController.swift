@@ -20,6 +20,8 @@ class CategoryTableViewController: UITableViewController {
     
     var movies:[Movie] = []
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -64,6 +64,10 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        navigationItem.title = "SEARCH_NAVIGATION".localized()
+        topLabel.text = "CATEGORIES_SEARCH".localized()
+        searchTextField.placeholder = "SEARCH_PLACEHOLDER".localized()
+        
         let layout = LeftAlignedCollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 16.0, left: 24.0, bottom: 16.0, right: 24.0)
         layout.minimumInteritemSpacing = 8
